@@ -1,0 +1,46 @@
+<nav
+  class="flex items-center justify-between flex-wrap bg-gray-800 px-6 h-16 shadow"
+>
+  <div class="flex items-center flex-shrink-0 text-white mr-6 h-full">
+    <img class="w-40" src="/assets/img/Logo_blanc_sans_slogan.png" alt="" />
+  </div>
+  <div class="block lg:hidden flex item-center">
+    <button
+      (click)="toggleMobileMenu()"
+      class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white"
+    >
+      <svg
+        class="fill-current h-3 w-3"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>Menu</title>
+        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+      </svg>
+    </button>
+  </div>
+  <div
+    *ngIf="isMenuVisible"
+    class="w-full block flex-grow lg:flex lg:items-center lg:w-auto lg:h-full bg-gray-800"
+  >
+    <div
+      class="text-sm lg:flex-grow h-full absolute lg:static top-16 left-0 bg-gray-700 lg:bg-transparent"
+    >
+      <button
+        *ngFor="let link of navigationList"
+        [routerLink]="link.path"
+        role="menuitem"
+        class="block lg:inline-block lg:mt-0 text-white text-left w-full lg:w-auto lg:hover:bg-gray-700 lg:h-full p-3"
+      >
+        {{ link.text }}
+      </button>
+    </div>
+  </div>
+</nav>
+
+<header class="bg-white"></header>
+<main>
+  <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+    <router-outlet></router-outlet>
+  </div>
+</main>
