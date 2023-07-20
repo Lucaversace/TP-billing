@@ -1,0 +1,20 @@
+[
+  { "id": 1, "productName": "Ordinateur", "productPrice": "751.00" },
+  { "id": 2, "productName": "Chemise", "productPrice": "99.00" },
+  { "id": 3, "productName": "Savon", "productPrice": "13.00" },
+  { "id": 4, "productName": "Poulet", "productPrice": "36.00" },
+  { "id": 5, "productName": "Gants", "productPrice": "62.00" },
+  { "id": 6, "productName": "Fromage", "productPrice": "14.00" },
+  { "id": 7, "productName": "Pizza", "productPrice": "13.00" },
+  { "id": 8, "productName": "Clavier", "productPrice": "55.00" },
+  { "id": 9, "productName": "Voiture", "productPrice": "4980.00" },
+  { "id": 10, "productName": "Chaise", "productPrice": "25.00" },
+  { "id": 11, "productName": "Boule", "productPrice": "18.00" },
+  { "id": 12, "productName": "Lard", "productPrice": "8.00" },
+  { "id": 13, "productName": "Chapeau", "productPrice": "216.00" },
+  { "id": 13, "productName": "Saucisses", "productPrice": "31.00" },
+  { "id": 14, "productName": "Pantalon", "productPrice": "216.00" },
+  { "id": 15, "productName": "Souris", "productPrice": "86.00" },
+  { "id": 16, "productName": "Vélo", "productPrice": "913.00" },
+  { "id": 17, "productName": "Frites", "productPrice": "9.00" }
+]
