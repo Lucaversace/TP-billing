@@ -10,6 +10,6 @@ export class ProductService {
   private http = inject(HttpClient);
 
   getAllProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>('../../../assets/data/products.json');
+    return this.http.get<Product[]>('/api/products');
   }
 }

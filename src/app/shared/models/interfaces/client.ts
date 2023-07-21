@@ -3,4 +3,5 @@ export interface Client {
   lastname: string;
   birthDate: Date;
   email: string;
+  id: number;
 }

@@ -10,6 +10,14 @@ export class ClientService {
   private http = inject(HttpClient);
 
   getAllClients(): Observable<Client[]> {
-    return this.http.get<Client[]>('/api/client');
+    return this.http.get<Client[]>('/api/clients');
+  }
+
+  getClientById(id: number): Observable<Client> {
+    return this.http.get<Client>(`/api/clients/${id}`);
+  }
+
+  createClient(client: Client): Observable<Client> {
+    return this.http.post<Client>('/api/clients', client);
   }
 }

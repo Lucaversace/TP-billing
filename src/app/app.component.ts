@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { NavigationSection } from './core/layout/models/navigation-section';
 import { LayoutComponent } from './core/layout/ui/layout/layout.component';
+import { InitAppService } from './shared/services/init-app.service';
 
 @Component({
   standalone: true,
@@ -10,7 +11,8 @@ import { LayoutComponent } from './core/layout/ui/layout/layout.component';
   imports: [LayoutComponent],
 })
 export class AppComponent {
-  title = 'billing';
+  initAppService = inject(InitAppService);
+
   menuList: NavigationSection[] = [
     {
       text: 'Liste des factures',
@@ -25,4 +27,9 @@ export class AppComponent {
       path: 'clients/creer',
     },
   ];
+
+  ngOnInit(): void {
+    // Initialise la fake API
+    this.initAppService.init();
+  }
 }

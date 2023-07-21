@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { MobileService } from 'src/app/shared/services/mobile.service';
+import { MobileService } from '@shared/services/mobile.service';
 import { NavigationSection } from '../../models/navigation-section';
 
 @Component({
@@ -21,8 +21,7 @@ export class LayoutComponent {
     this.isMenuVisible = !this.mobileService.isMobile();
   }
 
-  toggleMobileMenu() {
-    console.log(this.isMenuVisible);
+  toggleMobileMenu(): void {
     this.isMenuVisible = !this.isMenuVisible;
   }
 }

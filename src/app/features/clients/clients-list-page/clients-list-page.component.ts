@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
+import { Client } from '@shared/models/interfaces/client';
+import { ClientService } from '@shared/services/client.service';
 import { Observable } from 'rxjs';
-import { Client } from 'src/app/shared/models/interfaces/client';
-import { ClientService } from 'src/app/shared/services/client.service';
 @Component({
   selector: 'app-clients-list-page',
   standalone: true,
